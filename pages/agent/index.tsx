@@ -2,13 +2,12 @@ import withLayoutBasic from "@/libs/components/layout/LayoutBasic";
 import { Container, Stack } from "@mui/material";
 import { NextPage } from "next";
 
-const Community: NextPage = () => {
-    console.log("COMMUNUTY COMPONENT -- PAGES ROUTER")
+const AgentList: NextPage = () => {
     return (
         <div style={{ margin: "20px 0" }}>
-            <Stack className="container">COMMUNITY PAGE</Stack>
+            <Stack className="container">AGENTS LIST</Stack>
         </div>
     )
 }
 
-export default withLayoutBasic(Community);
+export default withLayoutBasic(AgentList);
