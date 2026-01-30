@@ -1,0 +1,564 @@
+#pc-wrap {
+    #property-list-page {
+        padding: 50px 0 40px;
+        background: #f6f6f6;
+
+        .container {
+            position: relative;
+            width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+
+            /* Sort by */
+            .right {
+                position: absolute;
+                right: 0;
+                top: 0;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+                z-index: 2;
+
+                span {
+                    color: #181a20;
+                    font-family: $font;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+
+                button {
+                    margin-left: 0;
+                    color: #181a20;
+                    font-family: $font;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 26px;
+                    text-transform: none;
+                    padding: 6px 10px;
+                    border-radius: 10px;
+
+                    &:hover {
+                        background: transparent;
+                    }
+                }
+            }
+
+            /* ✅ FIXED TYPO: property-page */
+            .property-page {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 30px;
+                padding-top: 40px;
+
+                /* LEFT FILTER */
+                .filter-config {
+                    width: 320px;
+                    flex: 0 0 320px;
+
+                    .filter-main {
+                        background: #ffffff;
+                        border-radius: 14px;
+                        padding: 22px 18px;
+                        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06);
+                        overflow: hidden;
+                        /* ✅ prevents price range from visually spilling */
+
+                        .find-your-home {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+
+                            .title-main {
+                                color: #181a20;
+                                font-family: $font;
+                                font-size: 16px;
+                                font-weight: 700;
+                                margin-bottom: 12px;
+                            }
+
+                            .title {
+                                color: #181a20;
+                                font-family: $font;
+                                font-size: 13px;
+                                font-weight: 700;
+                                margin-bottom: 12px;
+                            }
+
+                            /* ✅ INPUT BOX (BASE) */
+                            .input-box {
+                                position: relative;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                gap: 10px;
+
+                                .search-input {
+                                    width: 100%;
+                                    height: 44px;
+                                    border-radius: 12px;
+                                    background: #ffffff;
+                                    padding-right: 60px;
+
+                                    .MuiOutlinedInput-input {
+                                        padding: 12px 14px;
+                                        font-family: $font;
+                                        font-size: 13px;
+                                    }
+
+                                    .MuiOutlinedInput-notchedOutline {
+                                        border: 1px solid #e6e6e6;
+                                    }
+
+                                    &:hover .MuiOutlinedInput-notchedOutline {
+                                        border: 1px solid #d6d6d6;
+                                    }
+
+                                    &.Mui-focused .MuiOutlinedInput-notchedOutline {
+                                        border: 1px solid #181a20;
+                                    }
+                                }
+
+                                img {
+                                    width: 18px;
+                                    height: 18px;
+                                    opacity: 0.65;
+                                }
+
+                                button {
+                                    width: 36px;
+                                    height: 36px;
+
+                                    &:hover {
+                                        background: #f3f3f3;
+                                    }
+                                }
+
+                                .property-checkbox {
+                                    padding: 6px;
+                                }
+
+                                .property-type,
+                                .property_type {
+                                    color: #181a20;
+                                    font-family: $font;
+                                    font-size: 12px;
+                                    font-weight: 500;
+                                }
+                            }
+
+                            .property-location {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 6px;
+                                overflow: hidden;
+                            }
+
+                            /* Rooms + Bedrooms buttons (keep your sx but this helps overall layout) */
+                            .button-group {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: row;
+
+                                button {
+                                    flex: 1;
+                                    height: 38px;
+                                    min-width: 0;
+                                    padding: 0;
+                                    color: #181a20;
+                                    font-family: $font;
+                                    font-size: 12px;
+                                    font-weight: 600;
+                                    text-transform: none;
+                                    background: #ffffff;
+
+                                    &:hover {
+                                        background: #f5f5f5;
+                                    }
+                                }
+                            }
+
+                            /* ✅ Square meter & Price Range same layout */
+                            .square-year-input {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                gap: 10px;
+                                overflow: hidden;
+
+                                .central-divider {
+                                    width: 10px;
+                                    height: 2px;
+                                    background: #b9b9b9;
+                                    border-radius: 2px;
+                                    flex: 0 0 10px;
+                                }
+
+                                .MuiFormControl-root {
+                                    flex: 1;
+                                    min-width: 0;
+                                }
+
+                                .MuiInputLabel-root {
+                                    font-family: $font;
+                                    font-size: 12px;
+                                }
+
+                                .MuiOutlinedInput-root {
+                                    height: 44px;
+                                    border-radius: 12px;
+
+                                    .MuiOutlinedInput-notchedOutline {
+                                        border: 1px solid #e6e6e6;
+                                    }
+                                }
+
+                                input {
+                                    flex: 1;
+                                    min-width: 0;
+                                    height: 44px;
+                                    border-radius: 12px;
+                                    border: 1px solid #e6e6e6;
+                                    padding: 0 12px;
+                                    font-family: $font;
+                                    font-size: 12px;
+                                    outline: none;
+                                    box-sizing: border-box;
+                                    background: #ffffff;
+
+                                    &:focus {
+                                        border: 1px solid #181a20;
+                                    }
+                                }
+
+                                /* ✅✅✅ FIX: MAKE Min/Max VISIBLE LIKE 2nd PIC */
+                                overflow: visible;
+
+                                .MuiFormControl-root {
+                                    overflow: visible;
+                                }
+
+                                .MuiInputLabel-root {
+                                    font-family: $font;
+                                    font-size: 12px;
+                                    z-index: 2;
+                                    background: #ffffff;
+                                    padding: 0 6px;
+                                    line-height: 1;
+                                }
+
+                                .MuiInputLabel-outlined {
+                                    transform: translate(14px, 8px) scale(1);
+                                }
+
+                                .MuiInputLabel-outlined.MuiInputLabel-shrink {
+                                    transform: translate(14px, 0px) scale(0.75);
+                                }
+                            }
+                        }
+
+                        /* ✅✅ SEARCH INPUT ONLY (FIRST find-your-home ONLY) */
+                        >.find-your-home:first-child {
+                            .input-box {
+
+                                /* 🔥 search icon INSIDE the input (left side) */
+                                img {
+                                    position: absolute;
+                                    left: 16px;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    z-index: 3;
+                                    pointer-events: none;
+                                    cursor: pointer;
+                                    pointer-events: auto;
+                                }
+
+                                /* 🔥 make room for search icon + X */
+                                .search-input {
+                                    padding-right: 64px;
+                                    /* room for X */
+                                    padding-left: 44px;
+                                    /* room for search icon */
+
+                                    .MuiOutlinedInput-input {
+                                        padding: 12px 14px;
+                                        /* keep your original */
+                                        padding-left: 0;
+                                        /* ✅ prevent double left padding */
+                                    }
+                                }
+
+                                /* 🔥 X INSIDE INPUT (not outside) */
+                                &::after {
+                                    content: "×";
+                                    position: absolute;
+                                    right: 52px;
+                                    /* inside input, before refresh icon */
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 22px;
+                                    height: 22px;
+                                    border-radius: 50%;
+                                    background: #6b6b6b;
+                                    color: #ffffff;
+                                    font-size: 16px;
+                                    line-height: 22px;
+                                    text-align: center;
+                                    opacity: 0.9;
+                                    pointer-events: none;
+                                    cursor: pointer;
+                                    pointer-events: auto;
+                                    z-index: 3;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                /* RIGHT SIDE */
+                .main-config {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .list-config {
+                        width: 100%;
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        gap: 24px;
+                        align-items: stretch;
+                    }
+
+                    .pagination-config {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 28px;
+
+                        .pagination-box {
+                            display: flex;
+                            justify-content: center;
+
+                            .MuiPagination-ul {
+                                gap: 8px;
+                                justify-content: center;
+                            }
+
+                            .MuiPaginationItem-root {
+                                font-family: $font;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+
+                    .total-result {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 10px;
+
+                        p {
+                            color: #181a20;
+                            font-family: $font;
+                            font-size: 14px;
+                            font-weight: 500;
+                            opacity: 0.85;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* ===========================
+     PropertyCard styles
+     =========================== */
+
+    .card-config {
+        width: 100%;
+        background: #ffffff;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.06);
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+        }
+
+        .top {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 14px 14px 0 0;
+
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+            .top-badge {
+                position: absolute;
+                top: 14px;
+                left: 14px;
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                padding: 6px 10px;
+                border-radius: 10px;
+                background: #ff6b6b;
+                box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.18);
+
+                img {
+                    width: 14px;
+                    height: 14px;
+                    object-fit: contain;
+                }
+
+                p {
+                    color: #ffffff;
+                    font-family: $font;
+                    font-size: 12px;
+                    font-weight: 700;
+                }
+            }
+
+            .price-box {
+                position: absolute;
+                left: 14px;
+                bottom: 14px;
+                background: #ffffff;
+                padding: 8px 12px;
+                border-radius: 10px;
+                box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.14);
+
+                p {
+                    color: #181a20;
+                    font-family: $font;
+                    font-size: 13px;
+                    font-weight: 800;
+                }
+            }
+        }
+
+        .bottom {
+            padding: 14px 14px 12px;
+
+            .name-address {
+                .name {
+                    a {
+                        text-decoration: none;
+                    }
+
+                    p {
+                        color: #181a20;
+                        font-family: $font;
+                        font-size: 14px;
+                        font-weight: 800;
+                        line-height: 18px;
+                    }
+                }
+
+                .address {
+                    margin-top: 6px;
+
+                    p {
+                        color: #717171;
+                        font-family: $font;
+                        font-size: 12px;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .options {
+                display: flex;
+                flex-direction: row;
+                gap: 16px;
+                margin-top: 12px;
+
+                .option {
+                    display: inline-flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 6px;
+                    white-space: nowrap;
+
+                    img {
+                        width: 16px;
+                        height: 16px;
+                        opacity: 0.8;
+                        flex: 0 0 16px;
+                    }
+
+                    p {
+                        color: #181a20;
+                        font-family: $font;
+                        font-size: 12px;
+                        font-weight: 600;
+                        opacity: 0.9;
+                        display: inline-block;
+                        line-height: 16px;
+                    }
+                }
+            }
+
+            .divider {
+                width: 100%;
+                height: 1px;
+                background: #eeeeee;
+                margin: 12px 0;
+            }
+
+            .type-buttons {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                .type {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+
+                    p {
+                        color: #9b9b9b;
+                    }
+                }
+
+                .buttons {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 6px;
+
+                    button {
+                        padding: 6px;
+                    }
+
+                    .view-cnt {
+                        color: #7a7a7a;
+                        font-family: $font;
+                        font-size: 12px;
+                        font-weight: 600;
+                        margin-right: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
